@@ -9,10 +9,11 @@ const EmailNoti = () => {
       <div className="flex justify-between items-center ">
         <Link className="flex-initial" to={"/otp-verify"}>
           <FiArrowLeft
-            className="text-3xl"
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize:" 32px"
             }}
           />
         </Link>

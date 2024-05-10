@@ -37,10 +37,11 @@ const SignUp = () => {
       <div className="flex justify-between items-center  ">
         <Link className="flex-initial" onClick={() => navigate(-1)}>
           <FiArrowLeft
-            className="text-3xl"
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize: " 32px"
             }}
           />
         </Link>
@@ -173,7 +174,9 @@ const SignUp = () => {
             </div>
           </div>
           <div className="flex gap-2 ms-3">
-            <Checkbox id="terms" />
+            <div className="mt-1">
+              <Checkbox id="terms" />
+            </div>
             <p>
               I agree with the{" "}
               <Link className="text-red-500">Terms & Conditions</Link> and

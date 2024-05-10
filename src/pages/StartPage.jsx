@@ -4,7 +4,7 @@ const StartPage = () => {
   return (
     <>
       <div className="flex flex-col items-center  gap-16 justify-between h-[100vh] w-full ">
-        <div className=" mt-[20vh] ">
+        <div className=" mt-[30vh] ">
           <img src="images/logo.png" alt="" width="90" height="90" />
         </div>
         <div className="flex flex-col  gap-5 flex-end h-[50%] mt-[20vh] ">

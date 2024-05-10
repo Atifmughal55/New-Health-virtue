@@ -42,14 +42,15 @@ const Settings = () => {
   ];
   const navigate = useNavigate();
   return (
-    <div className="m-5">
-      <div className="flex justify-between items-center ">
+    <div className="m-5 ">
+      <div className=" flex justify-between items-center">
         <Link className="flex-initial" onClick={() => navigate(-1)}>
           <FiArrowLeft
-            className="text-3xl"
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize: " 32px"
             }}
           />
         </Link>
@@ -57,30 +58,32 @@ const Settings = () => {
           Settings
         </h1>
       </div>
+      <div className="mt-10">
 
-      {linkData.map((link, i) => (
-        <Link
-          to={link.to}
-          className="flex items-center justify-between my-5"
-          key={i}
-        >
-          <div className=" flex gap-4">
-            <img src={link.icon} alt="" />
+        {linkData.map((link, i) => (
+          <Link
+            to={link.to}
+            className="flex items-center justify-between my-6"
+            key={i}
+          >
+            <div className=" flex gap-4">
+              <img src={link.icon} alt="" />
 
-            <h1>{link.text}</h1>
-          </div>
-          <div className="flex items-center gap-1">
-            {link.text === "Language" ? (
-              <p className="text-gray-400">English</p>
-            ) : (
-              ""
-            )}
-            <i>
-              <MdKeyboardArrowRight />
-            </i>
-          </div>
-        </Link>
-      ))}
+              <h1 className="font-semibold">{link.text}</h1>
+            </div>
+            <div className="flex items-center gap-1">
+              {link.text === "Language" ? (
+                <p className="text-gray-400">English</p>
+              ) : (
+                ""
+              )}
+              <i>
+                <MdKeyboardArrowRight />
+              </i>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

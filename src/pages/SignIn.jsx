@@ -18,12 +18,12 @@ const SignIn = () => {
       <div className="mx-5 mt-8">
         <Link className="" onClick={() => navigate(-1)}>
           <FiArrowLeft
-            className="text-2xl"
-            style={{
-              border: "1px solid gray",
-              borderRadius: "100%",
-              marginBottom: "20px",
-            }}
+           className="p-1"
+           style={{
+             border: "1px solid gray",
+             borderRadius: "100%",
+             fontSize:" 32px"
+           }}
           />
         </Link>
       </div>
@@ -42,20 +42,16 @@ const SignIn = () => {
                 to={"/forgot-password"}
                 className="text-xs text-right block  text-gray-500 font-bold"
               >
-                Forget Password?
+                Forget Password ?
               </Link>
             </div>
             <Button type="submit" style={{ backgroundColor: "#1D5F8B" }}>
               Sign In
             </Button>
-            <div className="">
-              <p
-                className="block text-center font-bold mt-4"
-                style={{ fontSize: "13px" }}
-              >
-                Or Sign In With
-              </p>
-              <hr />
+            <div className="flex items-center justify-center mt-4">
+              <div className="flex-grow border-t border-gray-300"></div>
+              <span className="px-4 text-sm font-bold text-center text-gray-600">Or Sign In With</span>
+              <div className="flex-grow border-t border-gray-300"></div>
             </div>
             <Button
               onClick={() => navigate("/dashboard")}
@@ -82,7 +78,7 @@ const SignIn = () => {
               Don't Have An Account ?
               <Link
                 to={"/sign-up-start"}
-                className="font-bold"
+                className="font-bold pl-1"
                 style={{ color: "#0056D2" }}
               >
                 Sign Up Here

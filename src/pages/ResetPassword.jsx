@@ -26,10 +26,11 @@ const ResetPassword = () => {
       <div className="flex justify-between items-center ">
         <Link className="flex-initial" onClick={() => navigation(-1)}>
           <FiArrowLeft
-            className="text-3xl"
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize: " 32px"
             }}
           />
         </Link>
@@ -40,7 +41,9 @@ const ResetPassword = () => {
       <form>
         <div className="flex flex-col gap-5 mt-4 ">
           <div className="w-full md:w-[360px]">
-            <Label>Old Password</Label>
+            <div className="mb-3">
+              <Label>Old Password</Label>
+            </div>
             <div className=" flex border items-center justify-around">
               <Input
                 required
@@ -57,7 +60,9 @@ const ResetPassword = () => {
             </div>
           </div>
           <div className="w-full md:w-[360px]">
-            <Label>New Password</Label>
+            <div className="mb-3">
+              <Label>New Password</Label>
+            </div>
             <div className=" flex border items-center justify-around">
               <Input
                 required
@@ -74,7 +79,9 @@ const ResetPassword = () => {
             </div>
           </div>
           <div className="w-full md:w-[360px]">
-            <Label>Confirm Password</Label>
+            <div className="mb-3">
+              <Label>Confirm Password</Label>
+            </div>
             <div className=" flex border items-center justify-around">
               <Input
                 required

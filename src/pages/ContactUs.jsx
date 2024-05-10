@@ -9,9 +9,10 @@ import {
 import { FiArrowLeft } from "react-icons/fi";
 import { RiInstagramFill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+  const navigate = useNavigate();
   const data = [
     {
       icon: <FaAt className="text-3xl" />,
@@ -60,14 +61,15 @@ const ContactUs = () => {
     },
   ];
   return (
-    <div className="mt-5">
-      <div className="flex justify-between items-center ">
+    <div className="mt-5 ">
+      <div className="mb-10 flex justify-between items-center ">
         <Link className="ms-5 flex-initial">
-          <FiArrowLeft
-            className="text-3xl"
+          <FiArrowLeft onClick={() => navigate(-1)}
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize:" 32px"
             }}
           />
         </Link>
@@ -75,10 +77,10 @@ const ContactUs = () => {
           Contact Us.
         </h1>
       </div>
-      <div className=" flex my-5 flex-col md:w-[360px] ">
+      <div className=" flex flex-col md:w-[360px] ">
         {data.map((item, i) => (
           <div
-            className=" flex items-center gap-4 p-2  border-b border-black "
+            className=" py-4 flex items-center gap-4 p-2  border-b border-black "
             key={i}
           >
             <i className="ms-5">{item.icon}</i>

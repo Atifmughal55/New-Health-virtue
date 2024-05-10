@@ -13,32 +13,31 @@ const ForgetPass = () => {
   };
   return (
     <>
-      <div className="m-5">
-        <div className="">
-          <Link onClick={() => navigate(-1)}>
-            <FiArrowLeft
-              className="text-2xl hover:scale-110 transition-all"
-              style={{
-                border: "1px solid gray",
-                borderRadius: "100%",
-                marginBottom: "20px",
-              }}
-            />
-          </Link>
-          <h2
-            className="block text-center font-bold"
-            style={{ fontSize: "20px" }}
-          >
-            Forget Password
-          </h2>
-        </div>
-        <div className="flex flex-col sm:items-center gap-4  mt-5">
+      <div className="m-5 flex flex-col items-center gap-20">
+        <div className="flex justify-between items-center  w-full">
+        <Link className="flex-initial" onClick={() => navigate(-1)}>
+          <FiArrowLeft
+            className="p-1"
+            style={{
+              border: "1px solid gray",
+              borderRadius: "100%",
+              fontSize:" 32px"
+            }}
+          />
+        </Link>
+        <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center ">
+        Forget Password
+        </h1>
+      </div>
+        <div className="flex flex-col sm:items-center  ">
           <p className="text-center">
             Pleae Enter Your Email To Recieve Verification Code
           </p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="mt-5">
             <div className="sm:w-[360px]">
+              <div className="mb-5">
               <Label>Email</Label>
+              </div>
               <Input type="email" placeholder="email@email.com" required />
             </div>
 

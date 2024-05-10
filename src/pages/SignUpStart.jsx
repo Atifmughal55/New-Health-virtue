@@ -12,16 +12,16 @@ const SignUpStart = () => {
       <div>
         <Link className="" onClick={() => navigate(-1)}>
           <FiArrowLeft
-            className="text-2xl"
-            style={{
-              border: "1px solid gray",
-              borderRadius: "100%",
-              marginBottom: "20px",
-            }}
+          className="p-1"
+          style={{
+            border: "1px solid gray",
+            borderRadius: "100%",
+            fontSize:" 32px"
+          }}
           />
         </Link>
         <h1 className="text-center font-bold text-4xl mb-10">Sign Up.</h1>
-        <p className="block">Select User Type:</p>
+        <p className="block mb-8">Select User Type:</p>
         <div className="sm:w-full flex lg:justify-start lg:mt-5 justify-center md:flex-wrap gap-5">
           <Card
             icon={"svgs/patient.svg"}

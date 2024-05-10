@@ -30,23 +30,24 @@ const PatientProfile = () => {
     navigate("/dashboard");
   };
   return (
-    <div className="m-3">
+    <div className="m-5">
       <div className="flex justify-between items-center ">
         <Link className="flex-initial" onClick={() => navigate(-1)}>
           <FiArrowLeft
-            className="text-3xl"
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize: "32px"
             }}
           />
         </Link>
         <h1 className="md:text-4xl font-bold flex-auto flex justify-center ">
-          Edit Profile.
+          Edit Profile
         </h1>
       </div>
 
-      <div className="flex flex-col items-center my-3 gap-3">
+      <div className="flex flex-col items-center my-3 gap-3 ml-7">
         <img src="/images/user.png" alt="" />
         <h1 className="font-bold text-center lg:text-2xl">Ahmad</h1>
       </div>
@@ -55,16 +56,16 @@ const PatientProfile = () => {
         <form onSubmit={handleSubmit}>
           <div className=" flex flex-col gap-3 md:w-[460px]">
             <div className="flex flex-col gap-3 ">
-              <Label>Name</Label>
+              <Label className="font-semibold mb-1">Name</Label>
               <Input tye="text" placeholder="Ahmad Hamad" required />
             </div>
             <div className="flex flex-col gap-3 ">
-              <Label>Phone</Label>
+              <Label className="font-semibold mb-1">Phone</Label>
               <Input type="number" placeholder="123 456 789 0" required />
             </div>
 
             <div className=" flex flex-col gap-3">
-              <Label>Date of Birth</Label>
+              <Label className="font-semibold mb-1">Date of Birth</Label>
               <Popover>
                 <PopoverTrigger asChild>
                   <Button
@@ -94,12 +95,12 @@ const PatientProfile = () => {
             </div>
 
             <div className="flex flex-col gap-3 ">
-              <Label>Email</Label>
+              <Label className="font-semibold mb-1">Email</Label>
               <Input tye="email" placeholder="Input Value" required />
             </div>
 
             <div className="flex flex-col gap-3 ">
-              <Label>Disease</Label>
+              <Label className="font-semibold mb-1">Disease</Label>
               <Select>
                 <SelectTrigger className="">
                   <SelectValue placeholder="Select" />
@@ -128,18 +129,19 @@ const PatientProfile = () => {
               </Select>
             </div>
           </div>
-          <div className="flex lg:justify-start justify-center gap-1 mt-3">
+          <div className="flex lg:justify-start justify-center gap-1 mt-5">
             <input
               type="reset"
-              value="Cancel"
-              className="bg-transparent text-black font-semibold rounded-md border w-[180px] hover:bg-custom-blue hover:text-white hover:opacity-105"
+              value="CANCEL"
+              className="bg-transparent text-black font-semibold rounded-md border border-blue-700 text-lg w-[180px] hover:bg-blue-700 hover:text-white hover:border-transparent"
             />
+
 
             <Button
               type="submit"
-              className="bg-custom-blue w-[180px] hover:opacity-90"
+              className="bg-custom-blue py-7 w-[180px] hover:opacity-90 ml-3 text-lg"
             >
-              Update
+              UPDATE
             </Button>
           </div>
         </form>

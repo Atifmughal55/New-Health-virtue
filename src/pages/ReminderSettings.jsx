@@ -8,7 +8,12 @@ const ReminderSettings = () => {
     <div className="m-5">
       <div className="flex justify-between items-center ">
         <Link className=" flex-initial">
-          <FiArrowLeft className="text-3xl bg-gray-200 p-1 rounded-md" />
+          <FiArrowLeft className="p-1"
+            style={{
+              border: "1px solid gray",
+              borderRadius: "100%",
+              fontSize:" 32px"
+            }} />
         </Link>
         <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center ">
           Settings

@@ -81,8 +81,9 @@ const Dashboard = () => {
           <input
             type="text"
             placeholder="Search here"
-            className="pl-8 pr-4 py-2 border border-gray-300 rounded-3xl w-full md:w-[340px] focus:outline-none focus:ring focus:border-blue-300"
+            className="pl-10 pr-4 py-2 border border-gray-300 rounded-3xl w-full md:w-[340px] focus:outline-none focus:ring focus:border-blue-300"
           />
+
           <svg
             width="31"
             height="32"
@@ -113,7 +114,7 @@ const Dashboard = () => {
           </i>
           Search Here
         </Input> */}
-        <p>Upcomming</p>
+        <p className="font-bold">Upcomming</p>
         <div className="flex md:w-[460px] py-5 px-2 justify-between gap-4 items-center rounded-lg bg-blue-400 text-white  shadow-lg">
           <div className="flex flex-col items-center">
             <TbClockHour3 />
@@ -129,7 +130,7 @@ const Dashboard = () => {
           <BiRightArrowAlt className="text-8xl pt-[70px]" />
         </div>
 
-        <div className=" flex flex-wrap gap-6 justify-center">
+        <div className=" flex flex-wrap gap-6 justify-center text-blue-700">
           {cardData.map((item, i) => (
             <Card icon={item.icon} text={item.text} to={item.to} key={i} />
           ))}

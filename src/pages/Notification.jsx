@@ -31,10 +31,11 @@ const Notification = () => {
       <div className="flex justify-between items-center ">
         <Link className="flex-initial" onClick={() => navigate(-1)}>
           <FiArrowLeft
-            className="text-3xl"
+            className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
+              fontSize: " 32px"
             }}
           />
         </Link>
@@ -53,7 +54,7 @@ const Notification = () => {
 
       <div className="flex gap-3 my-5">
         <img src="svgs/calendar.svg" alt="" />
-        <p>Today</p>
+        <p className="font-medium text-black">Today</p>
       </div>
       <div className="md:flex gap-3 justify-center flex-wrap">
         {cardData.map((item, i) => (
@@ -74,9 +75,11 @@ const Notification = () => {
           </div>
         ))}
       </div>
-      <Link to={"/add-daily-routine"} className="">
-        <FaPlus className="text-5xl font-bold rounded-full text-white bg-custom-blue p-2 text-center ms-[50%] transform -translate-x-1/2" />
-      </Link>
+      <div className="mt-20">
+        <Link to={"/add-daily-routine"} >
+          <FaPlus className="text-5xl font-bold rounded-full text-white bg-custom-blue p-2 text-center ms-[50%] transform -translate-x-1/2" />
+        </Link>
+      </div>
     </div>
   );
 };

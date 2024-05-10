@@ -22,8 +22,12 @@ const SelectLanguage = () => {
         <div className="flex justify-between items-center ">
           <Link className=" flex-initial" onClick={() => navigate(-1)}>
             <FiArrowLeft
-              className="text-3xl bg-gray-200 p-1 rounded-md"
-              style={{}}
+             className="p-1"
+             style={{
+               border: "1px solid gray",
+               borderRadius: "100%",
+               fontSize:" 32px"
+             }}
             />
           </Link>
           <h1 className="md:text-2xl  flex-auto flex justify-center ">
