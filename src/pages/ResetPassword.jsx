@@ -9,7 +9,6 @@ import { RiEyeCloseLine } from "react-icons/ri";
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
@@ -30,7 +29,7 @@ const ResetPassword = () => {
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
-              fontSize: " 32px"
+              fontSize: " 32px",
             }}
           />
         </Link>
@@ -102,19 +101,19 @@ const ResetPassword = () => {
           <BsInfoCircle />
           <p>Password Policy</p>
         </div>
-        <p className="text-center text-sm md:w-[300px] text-gray-400 mx-7">
+        <p className="text-center text-sm md:w-[300px] text-gray-400 mx-7 mb-2">
           Your password should be 8 and 15 characters with atleast 1 numeric
           digit special character allowed
         </p>
         <AlertDialog>
-          <AlertDialogTrigger>
-            <Button className="bg-custom-blue w-full md:w-[360px]">
-              Reset
-            </Button>
+          <AlertDialogTrigger className="bg-custom-blue w-full md:w-[360px] uppercase text-white rounded-lg py-4">
+            {/* <Button className="bg-custom-blue w-full md:w-[360px]"> */}
+            Reset
+            {/* </Button> */}
           </AlertDialogTrigger>
-          <AlertDialogContent>
+          <AlertDialogContent className="mx-4 rounded-lg">
             <AlertDialogHeader>
-              <AlertDialogTitle>
+              <AlertDialogTitle className="flex justify-center">
                 <svg
                   width="86"
                   height="85"
@@ -125,26 +124,26 @@ const ResetPassword = () => {
                   <path
                     d="M43 82.625C65.3675 82.625 83.5 64.6604 83.5 42.5C83.5 20.3396 65.3675 2.375 43 2.375C20.6325 2.375 2.5 20.3396 2.5 42.5C2.5 64.6604 20.6325 82.625 43 82.625Z"
                     stroke="#315574"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M17 41.9055L36.5 60.3333L69 29.6204"
                     stroke="#315574"
-                    stroke-width="7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </AlertDialogTitle>
-              <AlertDialogDescription>
+              <AlertDialogDescription className="uppercase text-custom-blue font-bold text-center">
                 Your Password has been reset.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogAction>
-                <Link className="uppercase" to={"/sign-in"}>
+              <AlertDialogAction className="bg-custom-blue py-6 w-32 mx-auto">
+                <Link className="uppercase " to={"/sign-in"}>
                   Sign in
                 </Link>
               </AlertDialogAction>

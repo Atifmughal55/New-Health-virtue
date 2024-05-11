@@ -33,13 +33,13 @@ const AddRoutine = () => {
   return (
     <div className="m-5">
       <div className="flex justify-between items-center ">
-      <Link className="flex-initial"  to={"/notifications"}>
+        <Link className="flex-initial" to={"/notifications"}>
           <FiArrowLeft
             className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
-              fontSize: " 32px"
+              fontSize: " 32px",
             }}
           />
         </Link>
@@ -81,15 +81,15 @@ const AddRoutine = () => {
           />
         </div>
         <div className="">
-          <h1 className="font-semibold mb-3 text-black text-sm" >Dose</h1>
+          <h1 className="font-semibold mb-3 text-black text-sm">Dose</h1>
           <Select>
             <SelectTrigger className="md:w-[380px] w-full border text-left rounded-md p-2 text-gray-500">
-              <SelectValue placeholder="Theme" />
+              <SelectValue placeholder="Select Dose" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
+              <SelectItem value="light">Spoon</SelectItem>
+              <SelectItem value="dark">1 pill</SelectItem>
+              <SelectItem value="system">1 Cap</SelectItem>
             </SelectContent>
           </Select>
         </div>
