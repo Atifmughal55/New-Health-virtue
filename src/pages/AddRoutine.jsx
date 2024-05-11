@@ -1,3 +1,4 @@
+import DigitalClock from "@/components/ui/DigitalClock";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -54,7 +55,10 @@ const AddRoutine = () => {
         </div>
       </div>
       <h1 className="font-bold text-3xl text-center mt-4">Add Daily Routine</h1>
-      <div className="">Clock</div>
+      <div className="">
+        {" "}
+        <DigitalClock />
+      </div>
       <div className="">
         <h2 className="uppercase font-bold md:text-2xl">Repeat</h2>
         {weekDays.map((item, i) => (

@@ -111,7 +111,7 @@ const GuardianDashboard = () => {
           {cardData.map((item, i) => (
             <Card
               icon={item.icon}
-              color={"bg-blue-400"}
+              color="blue-700"
               text={item.text}
               to={item.to}
               key={i}

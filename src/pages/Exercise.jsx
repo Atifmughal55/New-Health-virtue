@@ -50,7 +50,7 @@ const Exercise = () => {
         {cardData.map((item, i) => (
           <Link
             to={"/tutorial"}
-            className="flex px-3 py-2 gap-16 shadow-lg rounded-lg bg-blue-200"
+            className="flex px-3 justify-between py-2 gap-16 md:w-[340px] w-full shadow-lg rounded-lg bg-blue-200"
             key={i}
           >
             <div className="">

@@ -74,7 +74,7 @@ const AddPatient = () => {
           <input
             type="text"
             placeholder="Search Here"
-            className="bg-transparent text-white "
+            className="bg-transparent text-white placeholder-white "
           />
         </Button>
       </div>
@@ -82,7 +82,7 @@ const AddPatient = () => {
         {patientData.map((patient, i) => (
           <div
             className="flex w-full md:w-[400px] justify-between 
-         border-b border-black px-3 py-2 "
+         border-b border-black ps-5 pe-3 py-2 "
             key={i}
           >
             <div className="flex items-start gap-2 ">
@@ -102,10 +102,10 @@ const AddPatient = () => {
               <p className="text-sm font-semibold">{patient.relation}</p>
               <p className="text-sm">{patient.date}</p>
               <Button
-                className="rounded-3xl px-9 py-0 bg-custom-blue my-2"
+                className="rounded-3xl px-7 py-2 bg-custom-blue my-2"
                 style={{ fontSize: "12px" }}
               >
-                Update
+                Add
               </Button>
             </div>
           </div>

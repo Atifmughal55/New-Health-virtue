@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import { useState } from "react";
 
 const Report = () => {
   const cardData = [
@@ -31,18 +32,22 @@ const Report = () => {
     },
   ];
 
+  const handleClick = () => {
+    setActive(!active);
+  };
   const navigate = useNavigate();
+  const [active, setActive] = useState(false);
   return (
     <div className="m-5">
       <div className="flex justify-between items-center ">
         <Link className=" flex-initial" onClick={() => navigate(-1)}>
           <FiArrowLeft
-           className="p-1"
-           style={{
-             border: "1px solid gray",
-             borderRadius: "100%",
-             fontSize:" 32px"
-           }}
+            className="p-1"
+            style={{
+              border: "1px solid gray",
+              borderRadius: "100%",
+              fontSize: " 32px",
+            }}
           />
         </Link>
         <h1 className="md:text-3xl font-bold flex-auto flex justify-center ">
@@ -53,7 +58,13 @@ const Report = () => {
 
       <div className=" flex  gap-4 mt-7">
         {cardData.map((item, i) => (
-          <Card icon={item.icon} text={item.text} to={item.to} key={i} />
+          <Card
+            icon={item.icon}
+            text={item.text}
+            to={item.to}
+            onClick={handleClick}
+            key={i}
+          />
         ))}
       </div>
       <div className="my-5 flex md:w-[360px]  shadow-lg justify-between px-7 py-5">
@@ -75,19 +86,21 @@ const Report = () => {
           <FaInfoCircle className="text-gray-400 text-lg" />
         </div>
       </div>
-      <div className="h-[350px] w-[350px]">
-        <Swiper spaceBetween={50} slidesPerView={1}>
-          <SwiperSlide>
-            <DoughnutChart />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BarChart />
-          </SwiperSlide>
-          <SwiperSlide>
-            <RadialChart />
-          </SwiperSlide>
-        </Swiper>
-      </div>
+      {active && (
+        <div className="h-[350px] w-[350px]">
+          <Swiper spaceBetween={50} slidesPerView={1}>
+            <SwiperSlide>
+              <DoughnutChart />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BarChart />
+            </SwiperSlide>
+            <SwiperSlide>
+              <RadialChart />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      )}
     </div>
   );
 };

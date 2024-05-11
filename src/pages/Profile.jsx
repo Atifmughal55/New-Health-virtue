@@ -19,12 +19,14 @@ export const Profile = () => {
       <div className="m-5">
         <div className="flex justify-between items-center ">
           <Link className=" flex-initial" onClick={() => navigate(-1)}>
-            <FiArrowLeft className="p-1"
-            style={{
-              border: "1px solid gray",
-              borderRadius: "100%",
-              fontSize:" 32px"
-            }} />
+            <FiArrowLeft
+              className="p-1"
+              style={{
+                border: "1px solid gray",
+                borderRadius: "100%",
+                fontSize: " 32px",
+              }}
+            />
           </Link>
           <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center ">
             My Profile
@@ -129,22 +131,12 @@ export const Profile = () => {
         </Accordion>
 
         {/* Address */}
-        <Accordion
-          type="single"
-          collapsible
-          className="w-full md:w-[360px] border border-black rounded-lg"
-        >
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl bg-blue-600 rounded-t-lg px-3">
-              My Address
-            </AccordionTrigger>
-            <AccordionContent className="py-1 px-3"></AccordionContent>
-          </AccordionItem>
-        </Accordion>
 
-        <div className="">
-          <Button className="uppercase">Cancel</Button>
-          <Button className="uppercase">Update</Button>
+        <div className="flex justify-center gap-2">
+          <Button className="uppercase bg-transparent border-2 text-black hover:text-white hover:bg-custom-blue shadow-gradient-1  px-9 py-6">
+            Cancel
+          </Button>
+          <Button className="uppercase bg-custom-blue px-9 py-6">Update</Button>
         </div>
       </div>
     </>
