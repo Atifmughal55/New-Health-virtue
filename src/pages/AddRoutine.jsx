@@ -56,7 +56,6 @@ const AddRoutine = () => {
       </div>
       <h1 className="font-bold text-3xl text-center mt-4">Add Daily Routine</h1>
       <div className="">
-        {" "}
         <DigitalClock />
       </div>
       <div className="">
