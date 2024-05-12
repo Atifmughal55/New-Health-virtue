@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const StartPage = () => {
   return (
     <>
-      <div className="flex flex-col items-center  gap-16 justify-between h-[100vh] w-full ">
-        <div className=" mt-[30vh] ">
-          <img src="images/logo.png" alt="" width="90" height="90" />
+      <div className="flex flex-col items-center md:gap-6 gap-18 justify-between h-[100vh] w-full ">
+        <div className=" mt-[151px] ">
+          <img src="images/2 23.png" height="186" width="227" alt="" />
         </div>
         <div className="flex flex-col  gap-5 flex-end h-[50%] mt-[20vh] ">
-          <p className="mx-6 text-center">
+          <p className="mx-6 text-center text-base">
             Let's get started on your journey to a healthier you.
           </p>
           <Link

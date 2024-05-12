@@ -24,6 +24,7 @@ module.exports = {
         "gradient-2": "#1D5F8B",
         "slider-blue": "#327C9B",
         "custom-font": "#315574",
+        "bg-switch-back": "#BEBEBE",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
