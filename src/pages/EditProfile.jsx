@@ -42,7 +42,7 @@ const PatientProfile = () => {
             }}
           />
         </Link>
-        <h1 className="md:text-4xl font-bold flex-auto flex justify-center ">
+        <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center">
           Edit Profile
         </h1>
       </div>

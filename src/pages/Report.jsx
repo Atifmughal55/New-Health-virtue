@@ -57,11 +57,11 @@ const Report = () => {
             }}
           />
         </Link>
-        <h1 className="md:text-3xl font-bold flex-auto flex justify-center ">
+        <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center">
           Report
         </h1>
       </div>
-      <p className="mt-8 ms-5">Select Report:</p>
+      <p className="mt-8 ms-5 font-bold text-base">Select Report :</p>
 
       <div className=" flex  gap-4 mt-7">
         {cardData.map((item, i) => (
@@ -77,8 +77,8 @@ const Report = () => {
       </div>
       <div className="my-5 flex md:w-[360px]  shadow-lg justify-between px-7 py-5">
         <div className="flex flex-col">
-          <h3 className="text-xl">{activeMed ? "Medicines" : "Exercise"}</h3>
-          <p className="text-2xl">59%</p>
+          <h3 className="text-xl font-semibold">{activeMed ? "Medicines" : "Exercise"}</h3>
+          <p className="text-2xl font-semibold">59%</p>
           <Select className="bg-transparent">
             <SelectTrigger className="bg-transparent p-0 border-none text-sm">
               <SelectValue placeholder="Last Year" />

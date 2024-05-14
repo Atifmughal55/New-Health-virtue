@@ -15,7 +15,7 @@ const ReminderSettings = () => {
               fontSize:" 32px"
             }} />
         </Link>
-        <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center ">
+        <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center">
           Settings
         </h1>
       </div>

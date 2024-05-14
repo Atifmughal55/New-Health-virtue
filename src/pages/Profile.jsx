@@ -63,7 +63,7 @@ export const Profile = () => {
                 <Separator />
                 <div className="">
                   <p className="text-sm text-gray-400">Gender</p>
-                  <RadioGroup defaultValue="option-one" className="flex">
+                  <RadioGroup defaultValue="option-one" className="flex mb-1">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="option-one" id="option-one" />
                       <Label htmlFor="option-one">Male</Label>
@@ -130,14 +130,19 @@ export const Profile = () => {
           </AccordionItem>
         </Accordion>
 
-        {/* Address */}
-
-        <div className="flex justify-center gap-2">
-          <Button className="uppercase bg-transparent border-2 text-black hover:text-white hover:bg-custom-blue shadow-gradient-1  px-9 py-6">
-            Cancel
-          </Button>
-          <Button className="uppercase bg-custom-blue px-9 py-6">Update</Button>
-        </div>
+         <div className="flex lg:justify-start justify-center gap-1 mt-2 mx-3">
+            <input
+              type="reset"
+              value="CANCEL"
+              className="bg-transparent text-black font-semibold rounded-md border border-blue-700 text-lg w-[180px] hover:bg-blue-700 hover:text-white hover:border-transparent"
+            />
+            <Button
+              type="submit"
+              className="bg-custom-blue py-7 w-[180px] hover:opacity-90 ml-3 text-lg"
+            >
+              UPDATE
+            </Button>
+          </div>
       </div>
     </>
   );

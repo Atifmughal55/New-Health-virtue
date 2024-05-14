@@ -6,7 +6,7 @@ const Card = ({ icon, text, to, color, onClick }) => {
       onClick={onClick}
       style={{ color: color }}
       to={to}
-      className={`bg-white  shadow-2xl text-gradient-1  rounded-lg  overflow-hidden hover:scale-105 transition-all p-3 md:w-[30%] lg:w-[20%] w-[160px] h-[130px] hover:bg-blue-300 hover:text-white`}
+      className={`bg-white  shadow-2xl text-gradient-1  rounded-lg  overflow-hidden hover:scale-105 transition-all p-2 md:w-[30%] lg:w-[20%] w-[160px] h-[130px] hover:bg-blue-300 hover:text-white`}
     >
       <div className=" flex flex-col  items-center">
         <div className="flex justify-end  w-full ">

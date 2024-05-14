@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { BsGearFill } from "react-icons/bs";
 import { CgSearch } from "react-icons/cg";
 import { FaPlusCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 const AddPatient = () => {
+  const navigation = useNavigate();
   const patientData = [
     {
       image: "/images/user2.png",
@@ -31,6 +32,16 @@ const AddPatient = () => {
   return (
     <div className="h-[100vh] ">
       <div className="bg-gradient-to-r from-gradient-1 to-gradient-2 p-5 rounded-b-3xl">
+      <Link className="flex-initial" onClick={() => navigation(-1)}>
+          <FiArrowLeft
+            className="p-1 mb-3"
+            style={{
+              border: "1px solid gray",
+              borderRadius: "100%",
+              fontSize: " 32px",
+            }}
+          />
+        </Link>
         <div className="flex justify-between items-center  ">
           <div className="flex items-center gap-3">
             <img src="images/user.png" height="50" width="50" alt="" />
@@ -85,7 +96,7 @@ const AddPatient = () => {
          border-b border-black ps-5 pe-3 py-2 "
             key={i}
           >
-            <div className="flex items-start gap-2 ">
+            <div className="flex items-start gap-1 ">
               <img
                 src={patient.image}
                 width={40}
@@ -94,15 +105,15 @@ const AddPatient = () => {
                 alt=""
               />
               <div className="">
-                <h2 className="text-sm font-semibold">{patient.name}</h2>
-                <p className="text-sm">{patient.disease}</p>
+                <h2 className="font-semibold text-lg text-custom-blue">{patient.name}</h2>
+                <p className="text-base text-custom-blue ">{patient.disease}</p>
               </div>
             </div>
             <div className="flex flex-col items-start">
-              <p className="text-sm font-semibold">{patient.relation}</p>
-              <p className="text-sm">{patient.date}</p>
+              <p className="text-base font-semibold">{patient.relation}</p>
+              <p className="text-base">{patient.date}</p>
               <Button
-                className="rounded-3xl px-7 py-2 bg-custom-blue my-2"
+                className="rounded-3xl  px-7 my-1 bg-custom-blue"
                 style={{ fontSize: "12px" }}
               >
                 Add

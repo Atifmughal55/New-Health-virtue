@@ -2,7 +2,7 @@ import { BsGearFill } from "react-icons/bs";
 import { CgSearch } from "react-icons/cg";
 import { Button } from "@/components/ui/button";
 import { TbClockHour3 } from "react-icons/tb";
-import { BiRightArrowAlt } from "react-icons/bi";
+import { PiArrowFatRight } from "react-icons/pi";
 import Card from "./Card";
 import { Link, useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
@@ -115,6 +115,8 @@ const Dashboard = () => {
           Search Here
         </Input> */}
         <p className="font-bold">Upcomming</p>
+        <Link to={"/my-exercise"}>
+        
         <div className="flex md:w-[460px] py-5 px-2 justify-between gap-4 items-center rounded-lg bg-blue-400 text-white  shadow-lg">
           <div className="flex flex-col items-center">
             <TbClockHour3 />
@@ -127,8 +129,9 @@ const Dashboard = () => {
               blood pressure
             </p>
           </div>
-          <BiRightArrowAlt className="text-8xl pt-[70px]" />
+          <PiArrowFatRight className="text-8xl pt-[70px]" />
         </div>
+        </Link>
 
         <div className=" flex flex-wrap gap-6 justify-center text-blue-700">
           {cardData.map((item, i) => (

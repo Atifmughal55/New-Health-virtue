@@ -39,7 +39,7 @@ const Notification = () => {
             }}
           />
         </Link>
-        <h1 className="md:text-3xl text-2xl font-bold flex-auto flex justify-center ">
+        <h1 className="md:text-3xl text-xl font-bold flex-auto flex justify-center">
           Reminder
         </h1>
         <div className="">

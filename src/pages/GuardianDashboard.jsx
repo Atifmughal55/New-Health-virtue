@@ -19,8 +19,8 @@ const cardData = [
   },
   {
     icon: "svgs/list.svg",
-    text: "Patient List",
-    to: "/notifications",
+    text: "Reschuedule",
+    to: "/add-daily-routine",
   },
   {
     icon: "svgs/report.svg",
@@ -91,7 +91,8 @@ const GuardianDashboard = () => {
         </Button>
       </div>
       <div className=" m-4">
-        <p className="mb-2 ms-5">Upcomming</p>
+        <p className="mb-2 ms-5 font-bold">Upcomming</p>
+        <Link to={'/my-exercise'}>
         <div className="flex md:w-[460px] my-4 py-5 px-2 justify-between gap-4 items-center rounded-lg bg-blue-400 text-white  shadow-lg">
           <div className="flex flex-col items-center">
             <TbClockHour3 />
@@ -106,6 +107,7 @@ const GuardianDashboard = () => {
           </div>
           <BiRightArrowAlt className="text-8xl pt-[70px]" />
         </div>
+        </Link>
 
         <div className=" flex flex-wrap gap-6 justify-center">
           {cardData.map((item, i) => (
