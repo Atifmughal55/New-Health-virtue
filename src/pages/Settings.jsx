@@ -1,6 +1,17 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FiArrowLeft } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 
 const Settings = () => {
   const linkData = [
@@ -37,7 +48,6 @@ const Settings = () => {
     {
       icon: "svgs/logout.svg",
       text: "Logout",
-      to: "/sign-in",
     },
   ];
   const navigate = useNavigate();
@@ -50,7 +60,7 @@ const Settings = () => {
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
-              fontSize: " 32px"
+              fontSize: " 32px",
             }}
           />
         </Link>
@@ -59,7 +69,6 @@ const Settings = () => {
         </h1>
       </div>
       <div className="mt-10">
-
         {linkData.map((link, i) => (
           <Link
             to={link.to}
@@ -68,8 +77,33 @@ const Settings = () => {
           >
             <div className=" flex gap-4">
               <img src={link.icon} alt="" />
-
-              <h1 className="font-semibold">{link.text}</h1>
+              {link.text === "Logout" ? (
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <span className="bg-white font-semibold text-black text-base">
+                      Log out
+                    </span>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>
+                        Are you sure you want to log out?
+                      </AlertDialogTitle>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter className="flex flex-row justify-center items-center gap-4">
+                      <AlertDialogCancel>No</AlertDialogCancel>
+                      <AlertDialogAction className="mt-2">
+                        <Link to={"/sign-in"}>
+                          {/* <link to={"/sign-in"}>Log Out</link> */}
+                          Yes
+                        </Link>
+                      </AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              ) : (
+                <h1 className="font-semibold">{link.text}</h1>
+              )}
             </div>
             <div className="flex items-center gap-1">
               {link.text === "Language" ? (
