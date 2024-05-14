@@ -1,8 +1,11 @@
 import { Progress } from "@/components/ui/progress";
-
+import { GrStatusGood } from "react-icons/gr";
+import { FaRegCircleXmark } from "react-icons/fa6";
 import { FiArrowLeft } from "react-icons/fi";
 import { TbClockHour3 } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
+
+import { useState } from "react";
 
 const Exercise = () => {
   const cardData = [
@@ -27,6 +30,11 @@ const Exercise = () => {
   ];
 
   const navigate = useNavigate();
+  const [selectedButton, setSelectedButton] = useState(null);
+
+  const handleButtonClick = (buttonId) => {
+    setSelectedButton(buttonId);
+  };
   return (
     <div className="mt-5 mx-5">
       <div className="flex justify-between items-center ">
@@ -45,7 +53,7 @@ const Exercise = () => {
         </h1>
       </div>
 
-      <p className="my-3">There are 4 Exercises for Back itch</p>
+      <p className="my-3 mb-10">There are 4 Exercises for Back itch</p>
       <div className="flex gap-6 flex-wrap mx-1">
         {cardData.map((item, i) => (
           <Link
@@ -70,7 +78,31 @@ const Exercise = () => {
           </Link>
         ))}
       </div>
-      <p className="mt-5 ms-5">Have you take your exercise today?</p>
+      <p className="mt-5 font-semibold">Have you take your exercise today?</p>
+      <div className="flex justify-end gap-3">
+        <button
+          id="cancelButton"
+          className={`text-3xl rounded-full focus:outline-none font-bold ${
+            selectedButton === "cancelButton"
+              ? "text-white bg-black"
+              : "text-black bg-white"
+          }`}
+          onClick={() => handleButtonClick("cancelButton")}
+        >
+          <FaRegCircleXmark />
+        </button>
+        <button
+          id="confirmButton"
+          className={`text-3xl rounded-full border-none flex items-center justify-center focus:outline-none font-bold ${
+            selectedButton === "confirmButton"
+              ? "text-white bg-blue-500"
+              : "text-blue-500 bg-white"
+          }`}
+          onClick={() => handleButtonClick("confirmButton")}
+        >
+          <GrStatusGood />
+        </button>
+      </div>
     </div>
   );
 };

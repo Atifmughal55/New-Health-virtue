@@ -20,6 +20,7 @@ import "swiper/css";
 import { useState } from "react";
 
 const Report = () => {
+  const navigate = useNavigate();
   const cardData = [
     {
       icon: "svgs/medicine.svg",
@@ -28,15 +29,21 @@ const Report = () => {
     {
       icon: "svgs/dumbill.svg",
       text: "Exercise",
-      to: "/my-exercise",
     },
   ];
 
-  const handleClick = () => {
-    setActive(!active);
+  const [activeMed, setActiveMed] = useState(false);
+  const [activeExe, setActiveExe] = useState(false);
+  const handleClick = (text) => {
+    if (text === "Medicines") {
+      setActiveMed(!activeMed);
+      setActiveExe(false);
+    } else if (text === "Exercise") {
+      setActiveExe(!activeExe);
+      setActiveMed(false);
+    }
   };
-  const navigate = useNavigate();
-  const [active, setActive] = useState(false);
+
   return (
     <div className="m-5">
       <div className="flex justify-between items-center ">
@@ -61,15 +68,16 @@ const Report = () => {
           <Card
             icon={item.icon}
             text={item.text}
-            to={item.to}
-            onClick={handleClick}
+            onClick={() => handleClick(item.text)}
             key={i}
+            activeExe={activeExe}
+            activeMed={activeMed}
           />
         ))}
       </div>
       <div className="my-5 flex md:w-[360px]  shadow-lg justify-between px-7 py-5">
         <div className="flex flex-col">
-          <h3 className="text-xl">Medicines</h3>
+          <h3 className="text-xl">{activeMed ? "Medicines" : "Exercise"}</h3>
           <p className="text-2xl">59%</p>
           <Select className="bg-transparent">
             <SelectTrigger className="bg-transparent p-0 border-none text-sm">
@@ -86,7 +94,7 @@ const Report = () => {
           <FaInfoCircle className="text-gray-400 text-lg" />
         </div>
       </div>
-      {active && (
+      {(activeMed || activeExe) && (
         <div className="h-[350px] w-[350px]">
           <Swiper spaceBetween={50} slidesPerView={1}>
             <SwiperSlide>

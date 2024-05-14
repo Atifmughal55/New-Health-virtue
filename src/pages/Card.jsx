@@ -14,7 +14,7 @@ const Card = ({ icon, text, to, color, onClick }) => {
         </div>
 
         <img src={icon} alt="" />
-        <p className={`text-lg font-semibold mt-3 text-${color}`}>{text} </p>
+        <p className={`text-lg font-semibold mt-3 text-blu-300`}>{text} </p>
       </div>
     </Link>
   );

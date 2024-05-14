@@ -10,9 +10,10 @@ import {
 import { SelectTrigger } from "@radix-ui/react-select";
 import { useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AddRoutine = () => {
+  const navigate = useNavigate();
   const weekDays = [
     { day: "Sun" },
     { day: "Mon" },
@@ -34,7 +35,7 @@ const AddRoutine = () => {
   return (
     <div className="m-5">
       <div className="flex justify-between items-center ">
-        <Link className="flex-initial" to={"/notifications"}>
+        <Link className="flex-initial" onClick={() => navigate(-1)}>
           <FiArrowLeft
             className="p-1"
             style={{
@@ -96,7 +97,10 @@ const AddRoutine = () => {
             </SelectContent>
           </Select>
         </div>
-        <Button className="uppercase bg-custom-blue md:w-[360px] py-7 text-lg">
+        <Button
+          onClick={() => navigate(-1)}
+          className="uppercase bg-custom-blue md:w-[360px] py-7 text-lg"
+        >
           Set reminder
         </Button>
       </div>

@@ -29,13 +29,13 @@ const Notification = () => {
   return (
     <div className="m-5">
       <div className="flex justify-between items-center ">
-        <Link className="flex-initial" onClick={() => navigate(-1)}>
+        <Link className="flex-initial" to={"/dashboard"}>
           <FiArrowLeft
             className="p-1"
             style={{
               border: "1px solid gray",
               borderRadius: "100%",
-              fontSize: " 32px"
+              fontSize: " 32px",
             }}
           />
         </Link>
@@ -76,7 +76,7 @@ const Notification = () => {
         ))}
       </div>
       <div className="mt-20">
-        <Link to={"/add-daily-routine"} >
+        <Link to={"/add-daily-routine"}>
           <FaPlus className="text-5xl font-bold rounded-full text-white bg-custom-blue p-2 text-center ms-[50%] transform -translate-x-1/2" />
         </Link>
       </div>

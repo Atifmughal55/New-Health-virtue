@@ -14,7 +14,7 @@ const cardData = [
   },
   {
     icon: "svgs/addPatient.svg",
-    text: "Add Patient",
+    text: "Patient List",
     to: "/add-patient",
   },
   {
