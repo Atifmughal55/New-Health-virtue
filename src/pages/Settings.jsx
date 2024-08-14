@@ -23,7 +23,7 @@ const Settings = () => {
     {
       icon: "svgs/bell-icon.svg",
       text: "Notifications",
-      to: "/notifications",
+      to: "/alarm",
     },
     {
       icon: "svgs/world.svg",

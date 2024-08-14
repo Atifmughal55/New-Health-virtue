@@ -61,7 +61,7 @@ const Dashboard = () => {
             </Link>
             <div className="bg-gray-100 p-1 rounded-md">
               <svg
-                onClick={() => navigate("/notifications")}
+                // onClick={() => navigate("/notifications")}
                 width="18"
                 height="20"
                 viewBox="0 0 15 18"

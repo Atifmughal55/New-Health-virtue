@@ -28,10 +28,3 @@ To run the project locally, follow these steps:
 - `src/`: Contains the source code for the project
 - `public/`: Contains static assets
 
-## Contributor
-
-- M. Maaz
-
-## Developed By
-
-- Atif Shafiq (atifmughal552@gmail.com)

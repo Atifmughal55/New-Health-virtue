@@ -24,6 +24,7 @@ import UserProfile from "./pages/UserProfile";
 import ReminderSettings from "./pages/ReminderSettings";
 import Tutorial from "./pages/Tutorial";
 import { Profile } from "./pages/Profile";
+import Alarm from "./pages/Alarm";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up-start" element={<SignUpStart />} />
         <Route path="/forgot-password" element={<ForgetPass />} />
         <Route path="/open-mail" element={<EmailNoti />} />
         <Route path="/otp-verify" element={<OTPVerify />} />
@@ -38,7 +40,6 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/sign-up-start" element={<SignUpStart />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/my-profile" element={<EditProfile />} />
@@ -54,6 +55,7 @@ function App() {
         <Route path="/reminder-settings" element={<ReminderSettings />} />
         <Route path="/tutorial" element={<Tutorial />} />
         <Route path="/patient-profile" element={<Profile />} />
+        <Route path="/alarm" element={<Alarm />} />
       </Routes>
     </BrowserRouter>
   );
